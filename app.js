@@ -29,7 +29,7 @@ process.on('uncaughtException', function(err) {
   
 process.on('uncaughtPromiseRejection', function(err) {
   console.log(" UNCAUGHT EXCEPTION ");
-  console.log("[Inside 'uncaughtException' event] " + err.stack || err.message);
+  console.log(err.message);
 });
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
