@@ -79,7 +79,7 @@ router.delete('/:id', async (req, res) =>{
       res.status(404).send({"message":"contact not found"})
       return;
      } 
-     const deletedObj =  await Contact.deleteOne({ _id: contact._id })
+     await Contact.deleteOne({ _id: contact._id })
      res.status(200).json({"message":"Contact deleted successfully",contact:contact});
 
   }catch(err){
