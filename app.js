@@ -24,7 +24,7 @@ app.get('*', function (req, res, next) {
   
 process.on('uncaughtException', function(err) {
   console.log(" UNCAUGHT EXCEPTION ");
-  console.log("[Inside 'uncaughtException' event] " + err.stack || err.message);
+  console.log(err.message);
 });
   
 process.on('uncaughtPromiseRejection', function(err) {
